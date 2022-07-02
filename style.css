@@ -155,7 +155,8 @@ footer {
 .netflix,
 .tribe-teq,
 .space,
-.portfolio {
+.portfolio,
+.camaro {
   background: url('/images/netflix.png') no-repeat center center/cover;
   width: 200px;
   aspect-ratio: 1/1;
@@ -169,6 +170,9 @@ footer {
 }
 .portfolio {
   background: url('/images/portfolio.png') no-repeat center center/cover;
+}
+.camaro{
+    background: url('/images/camaro.png') no-repeat center center/cover;
 }
 .work-container::-webkit-scrollbar,
 .skill-container::-webkit-scrollbar {
@@ -292,7 +296,8 @@ textarea {
   .netflix,
   .tribe-teq,
   .space,
-  .portfolio {
+  .portfolio,
+  .camaro {
     width: 100%;
   }
   .index-socials {
@@ -382,7 +387,8 @@ textarea {
   .netflix,
   .tribe-teq,
   .space,
-  .portfolio {
+  .portfolio,
+  .camaro {
     height: 100%;
     width: 300px;
   }
