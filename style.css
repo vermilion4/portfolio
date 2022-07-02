@@ -236,6 +236,14 @@ padding: 1rem;
     .netflix, .tribe-teq, .space, .portfolio{
         width: 100%;
     }
+    .index-socials{
+        top: 5%;
+        left: 0;
+        height: fit-content;
+        gap: 1.2rem;
+        font-size: 1rem;
+        
+    }
 }
 @media (min-width: 501px) and (max-width: 990.9px){
     .skill-item{
