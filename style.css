@@ -23,6 +23,9 @@ header{
     background: rgb(48, 47, 47);
     padding:0 1rem;
     height: 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 ul{
     list-style: none;
@@ -41,7 +44,7 @@ li a{
 }
 li a:hover, a.active{
     background-color: #fff;
-    color: rgb(48, 47, 47);
+    color: red;
 }
 
 .details{
@@ -57,6 +60,20 @@ li a:hover, a.active{
 .details h3{
     color: red;
 }
+.index-socials{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    padding: 1rem;
+    color: #fff;
+    background-color: rgb(48, 47, 47);
+    bottom: 0;
+}
+
+section{
+    margin-top: 80px;
+}
 #tiidelab{
     color: red;
     font-weight: 700;
@@ -69,14 +86,16 @@ justify-content: center;
 }
 .about{
     display: flex;
-    height: calc(100vh - 50px);
+    min-height: calc(100vh - 50px);
     align-items: center;
+    margin-bottom: 2rem;
 }
 .about-img{
     width: 150px;
     aspect-ratio: 1/1;
     border-radius: 100%;
     margin: 2rem 0;
+    z-index: -1;
 }
 .square{
     width: 50%;
@@ -89,6 +108,7 @@ justify-content: center;
     text-align: justify;
     width: 80%;
     margin: 0 auto;
+    font-size: 1.7rem;
 }
 .about-text h2{
     font-weight: 700;
@@ -106,20 +126,25 @@ footer{
     gap: 1rem;
     cursor: pointer;
 }
-.social-links a{
+.social-links a, .index-socials a{
     color: #fff;
 }
-.social-links a:hover{
+.social-links a:hover, .index-socials a:hover{
     color: red;
 }
 
 /* works */
-.works{
+.container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.works, .skills{
     width: 80%;
     margin: 2rem auto;
-    min-height: 100vh;
 }
-.netflix, .tribe-teq, .space{
+.netflix, .tribe-teq, .space, .portfolio{
     background: url('/images/netflix.png') no-repeat center center/cover;
     width: 200px;
     aspect-ratio: 1/1;
@@ -130,22 +155,26 @@ footer{
 .space{
     background: url('/images/space.png') no-repeat center center/cover;
 }
-.work-container::-webkit-scrollbar {
+.portfolio{
+    background: url('/images/portfolio.png') no-repeat center center/cover;
+}
+.work-container::-webkit-scrollbar, .skill-container::-webkit-scrollbar {
     display: none;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
   }
-.work-container{
+.work-container, .skill-container{
     display: flex;
     flex-direction: column;
     gap: 2rem;
     margin-top: 2rem;
     overflow: auto;
 }
-.work-item{
+.work-item, .skill-item{
     display: flex;
     align-items: center;
     background-color: #fff;
+    border-radius: 10px;
 }
 .work-item-info{
 padding: 1rem;
@@ -168,8 +197,53 @@ padding: 1rem;
     border-radius: 0.5rem;
     display: none;
 }
+.works h2, .skills h2{
+    font-weight: 700;
+    text-transform: uppercase;
+    color: red;
+}
 
+.skill-item-info{
+    width: 200px;
+}
+.skill-item-info{
+    text-align: center;
+    margin: 0 auto;
+}
+.skill-item-info p{
+    font-weight: 700;
+}
+.skill-logo{
+    font-size: 4rem;
+}
 
+@media (max-width: 500px){
+    .work-item{
+        flex-direction: column;
+    }
+    li a{
+        font-size: 0.6rem;
+        font-weight: bold;
+        padding: 1rem 0.6rem;
+    }
+    .details{
+        width: 100%;
+    }
+    .netflix, .tribe-teq, .space, .portfolio{
+        width: 100%;
+    }
+}
+@media (min-width: 501px) and (max-width: 990.9px){
+    .skill-item{
+        padding: 1rem 0;
+    }
+    .skill-container{
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+    }
+}
 @media (min-width: 991px){
     .details{
         width: 30%;
@@ -193,6 +267,7 @@ padding: 1rem;
         margin: 0.5rem;
         border: 10px inset red;
         background: url('/images/ada-2.jpg') no-repeat center center/cover;
+        z-index: -1;
     }
     .about-img{
         display: none;
@@ -201,23 +276,32 @@ padding: 1rem;
         flex-direction: row;
         height: calc(100vh - 50px);
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: evenly;
+        margin: 0 auto;
     }
-    .work-item{
+    .work-item, .skill-item{
         width: 50%;
     }
-    .work-container{
+    .work-container, .skill-container{
         flex-direction: row;
-        background-color: rgb(48, 47, 47);
+        background-color: rgb(43, 40, 40);
         padding: 2rem;
         border-radius: 5px;
-        box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
+        box-shadow: 10px 10px 5px grey;
     }
     .scroll{
         display: block;
     }
-    .netflix, .tribe-teq, .space{
+    .netflix, .tribe-teq, .space, .portfolio{
         height: 100%;
         width: 300px;
+    }
+    .skill-item{
+        height: 200px;
+    }
+    li a{
+        font-size: 1.5rem;
+        font-weight: bold;
+        padding: 1rem;
     }
 }
