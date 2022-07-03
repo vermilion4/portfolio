@@ -76,6 +76,8 @@ a.active {
 section {
   margin-top: 80px;
 }
+
+/* About */
 #tiidelab {
   color: red;
   font-weight: 700;
@@ -89,6 +91,7 @@ section {
 }
 .about {
   display: flex;
+  flex-direction: column;
   min-height: calc(100vh - 50px);
   align-items: center;
   margin-bottom: 2rem;
@@ -98,7 +101,6 @@ section {
   aspect-ratio: 1/1;
   border-radius: 100%;
   margin: 2rem 0;
-  z-index: -1;
 }
 .square {
   width: 50%;
@@ -112,7 +114,6 @@ section {
   width: 80%;
   margin: 0 auto;
   font-size: 1rem;
-  z-index: -1;
 }
 .about-text h2 {
   font-weight: 700;
@@ -137,6 +138,25 @@ footer {
 .social-links a:hover,
 .index-socials a:hover {
   color: red;
+}
+.download-container {
+  width: fit-content;
+  margin: 2rem auto;
+}
+.download-btn {
+  background-color: #fff;
+  color: red;
+  padding: 0.7rem 1rem;
+  border: 1px solid red;
+  border-radius: 5px;
+  font-weight: 700;
+  text-decoration: none;
+  width: fit-content;
+  cursor: pointer;
+}
+.download-btn:hover {
+  background-color: red;
+  color: #fff;
 }
 
 /* works */
@@ -170,8 +190,8 @@ footer {
 .portfolio {
   background: url('/images/portfolio.png') no-repeat center center/cover;
 }
-.camaro{
-    background: url('/images/camaro.png') no-repeat center center/cover;
+.camaro {
+  background: url('/images/camaro.png') no-repeat center center/cover;
 }
 .work-container::-webkit-scrollbar,
 .skill-container::-webkit-scrollbar {
@@ -257,7 +277,6 @@ footer {
   aspect-ratio: 1/1;
 }
 form {
-  
   border-radius: 10px;
   padding: 1rem;
 }
