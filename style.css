@@ -31,7 +31,6 @@ ul {
   list-style: none;
   display: flex;
   justify-content: flex-end;
-  gap: 0.5rem;
   height: 50px;
   align-items: center;
 }
@@ -57,7 +56,7 @@ a.active {
   bottom: 20%;
   padding: 1rem;
   font-weight: 700;
-  border: 1px solid #fff;
+  border-bottom: 1px solid #fff;
 }
 .details h3 {
   color: red;
@@ -66,7 +65,7 @@ a.active {
   position: absolute;
   display: flex;
   flex-direction: column;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding: 1rem;
   color: #fff;
   background-color: rgb(48, 47, 47);
@@ -250,6 +249,7 @@ footer {
   align-items: center;
   justify-content: space-around;
   margin-bottom: 2rem;
+  gap: 2rem;
 }
 .contact-image {
   background: url('/images/contact.webp') no-repeat center center/cover;
@@ -257,7 +257,7 @@ footer {
   aspect-ratio: 1/1;
 }
 form {
-  border: 1px solid rgb(48, 47, 47);
+  
   border-radius: 10px;
   padding: 1rem;
 }
@@ -268,6 +268,8 @@ form {
 input,
 textarea {
   padding: 0.8rem 0.4rem;
+  border: none;
+  border-bottom: 2px solid rgb(48, 47, 47);
 }
 .submit-btn {
   width: 100%;
