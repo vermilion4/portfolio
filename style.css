@@ -26,6 +26,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1;
 }
 ul {
   list-style: none;
@@ -87,14 +88,13 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  z-index: -1;
 }
 .about {
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - 50px);
   align-items: center;
-  margin-bottom: 2rem;
+  gap: 2rem;
 }
 .about-img {
   width: 150px;
@@ -379,9 +379,9 @@ textarea {
   }
   .box {
     flex-direction: row;
-    height: calc(100vh - 50px);
+    height: fit-content;
     align-items: center;
-    justify-content: evenly;
+    justify-content: space-evenly;
     margin: 0 auto;
   }
   .work-item,
