@@ -173,14 +173,15 @@ footer {
   margin: 2rem auto;
 }
 .netflix,
-.tribe-teq,
-.space,
-.portfolio,
-.camaro {
+  .tribe-teq,
+  .space,
+  .portfolio,
+  .camaro{
   background: url('/images/netflix.png') no-repeat center center/cover;
   width: 200px;
   aspect-ratio: 1/1;
   border-radius: 10px;
+  border: 1px solid rgb(48, 47, 47);
 }
 .tribe-teq {
   background: url('/images/tribe-teq.png') no-repeat center center/cover;
@@ -194,6 +195,12 @@ footer {
 .camaro {
   background: url('/images/camaro.png') no-repeat center center/cover;
 }
+/* .bondee{
+  background: url('/images/bondee.png') no-repeat center center/cover;
+}
+.google{
+  background: url('/images/google.png') no-repeat center center/cover;
+} */
 .work-container::-webkit-scrollbar,
 .skill-container::-webkit-scrollbar {
   display: none;
@@ -319,7 +326,7 @@ textarea {
   .tribe-teq,
   .space,
   .portfolio,
-  .camaro {
+  .camaro{
     width: 100%;
   }
   .index-socials {
