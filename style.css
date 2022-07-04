@@ -11,7 +11,7 @@ body {
 
 header {
   position: relative;
-  background: url('/images/ada.jpg') no-repeat center center/cover;
+  background: grey url('/images/ada.jpg') no-repeat center center/cover;
   height: 100vh;
   color: #fff;
 }
@@ -97,6 +97,7 @@ section {
   gap: 2rem;
 }
 .about-img {
+  background-color: rgb(48, 47, 47);
   width: 150px;
   aspect-ratio: 1/1;
   border-radius: 100%;
@@ -272,7 +273,7 @@ footer {
   gap: 2rem;
 }
 .contact-image {
-  background: url('/images/contact.webp') no-repeat center center/cover;
+  background: rgb(48, 47, 47) url('/images/contact.webp') no-repeat center center/cover;
   min-width: 300px;
   aspect-ratio: 1/1;
 }
@@ -371,7 +372,7 @@ textarea {
     height: 500px;
     margin: 0.5rem;
     border: 10px inset red;
-    background: url('/images/ada-2.jpg') no-repeat center center/cover;
+    background: rgb(48, 47, 47) url('/images/ada-2.jpg') no-repeat center center/cover;
     z-index: -1;
   }
   .about-img {
