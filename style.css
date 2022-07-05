@@ -391,6 +391,9 @@ textarea {
   .about {
     min-height: 60vh;
   }
+  .contact-image {
+    min-width: 450px;
+  }
 }
 
 @media (min-width: 991px) {
