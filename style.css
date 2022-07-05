@@ -116,7 +116,8 @@ section {
   margin: 0 auto;
   font-size: 1rem;
 }
-.about-text h2, .fun-moments h2 {
+.about-text h2,
+.fun-moments h2 {
   font-weight: 700;
   margin-bottom: 2rem;
 }
@@ -159,29 +160,29 @@ footer {
   background-color: red;
   color: #fff;
 }
-.fun-moments{
+.fun-moments {
   width: 80%;
   margin: 2rem auto;
 }
 .fun-moments h2 {
   text-transform: uppercase;
 }
-.masonry-container{
+.masonry-container {
   column-count: 1;
   column-gap: 1rem;
 }
-figure img{
+figure img {
   width: 100%;
   display: block;
 }
-figure{
+figure {
   margin: 0;
   display: grid;
   grid-template-rows: 1fr auto;
   margin-bottom: 10px;
   break-inside: avoid;
 }
-figure > img{
+figure > img {
   grid-row: 1 / -1;
   grid-column: 1;
 }
@@ -199,10 +200,10 @@ figure > img{
   margin: 2rem auto;
 }
 .netflix,
-  .tribe-teq,
-  .space,
-  .portfolio,
-  .camaro{
+.tribe-teq,
+.space,
+.portfolio,
+.camaro {
   background: url('/images/netflix.png') no-repeat center center/cover;
   width: 200px;
   aspect-ratio: 1/1;
@@ -306,7 +307,8 @@ figure > img{
   gap: 2rem;
 }
 .contact-image {
-  background: rgb(48, 47, 47) url('/images/contact.webp') no-repeat center center/cover;
+  background: rgb(48, 47, 47) url('/images/contact.webp') no-repeat center
+    center/cover;
   min-width: 300px;
   aspect-ratio: 1/1;
 }
@@ -352,7 +354,7 @@ textarea {
   .tribe-teq,
   .space,
   .portfolio,
-  .camaro{
+  .camaro {
     width: 100%;
   }
   .index-socials {
@@ -382,7 +384,7 @@ textarea {
   textarea {
     width: 400px;
   }
-  .masonry-container{
+  .masonry-container {
     column-count: 2;
     column-gap: 1rem;
   }
@@ -390,6 +392,12 @@ textarea {
     min-height: 60vh;
   }
 }
+@media (min-width: 768px) and (max-width: 990.9px) {
+  .contact {
+    min-height: 50vh;
+  }
+}
+
 @media (min-width: 991px) {
   .details {
     width: 30%;
@@ -413,7 +421,8 @@ textarea {
     height: 500px;
     margin: 0.5rem;
     border: 10px inset red;
-    background: rgb(48, 47, 47) url('/images/ada-2.jpg') no-repeat center center/cover;
+    background: rgb(48, 47, 47) url('/images/ada-2.jpg') no-repeat center
+      center/cover;
     z-index: -1;
   }
   .about-img {
@@ -468,7 +477,7 @@ textarea {
   .contact-image {
     min-width: 500px;
   }
-  .masonry-container{
+  .masonry-container {
     column-count: 4;
     column-gap: 1rem;
   }
