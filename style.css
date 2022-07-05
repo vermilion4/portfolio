@@ -51,13 +51,23 @@ a.active {
 .details {
   position: absolute;
   color: #fff;
-  background-color: rgb(48, 47, 47);
-  width: 70%;
+  background-color: rgb(125, 122, 122);
+  width: 40%;
   right: 0;
-  bottom: 20%;
   padding: 1rem;
   font-weight: 700;
   border-bottom: 1px solid #fff;
+  animation: intro 2s ease-in-out forwards;   
+}
+@keyframes intro {
+  from {
+    bottom: 0;
+  }
+  to {
+    bottom: 20%;
+    background-color: rgb(48, 47, 47);
+    width: 70%;
+  }
 }
 .details h3 {
   color: red;
@@ -71,7 +81,16 @@ a.active {
   color: #fff;
   background-color: rgb(48, 47, 47);
   bottom: 0;
+  left: 0;
   border: 1px solid #fff;
+  animation: fade 2s forwards ease-in-out;
+}
+@keyframes fade {
+  25% {
+    bottom: 0;
+    left: 200px;
+
+  }
 }
 
 section {
@@ -245,11 +264,14 @@ figure > img {
 .work-item,
 .skill-item {
   display: flex;
+  position: relative;
   align-items: center;
+  transform: translateX(0);
   /* background-color: #fff; */
   border: 1px solid grey;
   border-radius: 10px;
 }
+
 .work-item-info {
   padding: 1rem;
 }
@@ -311,6 +333,15 @@ figure > img {
     center/cover;
   min-width: 300px;
   aspect-ratio: 1/1;
+  animation: fade-in 2s ease-in-out;
+}
+@keyframes fade-in {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
 }
 form {
   border-radius: 10px;
@@ -364,6 +395,15 @@ textarea {
     gap: 1.2rem;
     font-size: 1rem;
   }
+  @keyframes intro {
+    from {
+      bottom: 0;
+    }
+    to {
+      bottom: 20%;
+      background-color: rgb(48, 47, 47);
+    }
+  }
 }
 @media (min-width: 501px) and (max-width: 990.9px) {
   .skill-item {
@@ -378,6 +418,7 @@ textarea {
   li a {
     padding: 0.8rem;
   }
+
 }
 @media (min-width: 768px) {
   input,
@@ -397,8 +438,15 @@ textarea {
 }
 
 @media (min-width: 991px) {
-  .details {
-    width: 30%;
+  @keyframes intro {
+    from {
+      bottom: 0;
+    }
+    to {
+      bottom: 20%;
+      background-color: rgb(48, 47, 47);
+      width: 50%;
+    }
   }
   .about {
     width: 80%;
@@ -418,10 +466,31 @@ textarea {
     width: 350px;
     height: 500px;
     margin: 0.5rem;
-    border: 10px inset red;
+    
     background: rgb(48, 47, 47) url('/images/ada-2.jpg') no-repeat center
       center/cover;
     z-index: -1;
+    animation: border 5s ease-in-out forwards;
+  }
+  @keyframes border {
+    25% {
+      border-top: 10px inset red;
+    }
+    50% {
+      border-top: 10px inset red;
+      border-right: 10px inset red;
+    }
+    75% {
+      border-top: 10px inset red;
+      border-right: 10px inset red;
+      border-bottom: 10px inset red;
+    }
+    100% {
+      border-top: 10px inset red;
+      border-right: 10px inset red;
+      border-bottom: 10px inset red;
+      border-left: 10px inset red;
+    }
   }
   .about-img {
     display: none;
